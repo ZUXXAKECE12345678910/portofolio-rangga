@@ -210,17 +210,63 @@
  </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Contact <span class="highlight">Me!</span></h2>
-        <form cla-form">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="tel" placeholder="Mobile Number" required>
-            <input type="text" placeholder="Email Subject" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
+            /* ========================================
+        CONTACT
+        ========================================
+        */
+        .contact-section { padding: 120px 0; padding-bottom: 60px; }
+        .contact-wrapper {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+        }
+        .contact-form {
+            display: flex; flex-direction: column; gap: 20px;
+            background: linear-gradient(180deg, rgba(12,12,14,0.5) 0%, rgba(12,12,14,0.2) 100%);
+            padding: 40px; border-radius: 24px; border: 1px solid var(--border-light);
+        }
+        .input-group input, .input-group textarea {
+            width: 100%; background: rgba(3, 3, 4, 0.6); border: 1px solid var(--border-light);
+            padding: 18px; border-radius: 12px; color: #fff; font-family: inherit; font-size: 0.95rem;
+            transition: 0.3s; outline: none;
+        }
+        .input-group input:focus, .input-group textarea:focus {
+            border-color: var(--primary); background: rgba(3, 3, 4, 0.9);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        }
+        
+        .social-link {
+            width: 50px; height: 50px; border-radius: 50%;
+            background: rgba(255,255,255,0.05); border: 1px solid var(--border-light);
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 1.4rem; transition: 0.3s var(--ease-elastic);
+            text-decoration: none;
+        }
+        .social-link:hover { background: var(--primary); border-color: var(--primary); transform: translateY(-5px); }
+
+        /* ========================================
+        MOBILE RESPONSIVE TWEAKS (PERFECTED)
+        ========================================
+        */
+        @media (max-width: 900px) {
+            .navbar { top: 0; width: 100%; border-radius: 0; border-top: none; padding: 16px 24px; max-width: 100%; border-left: none; border-right: none;}
+            .nav-links li:not(:last-child) { display: none; } /* Hide middle links on mobile */
+            
+            .bento-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 20px; }
+            .bento-item.span-2, .bento-item.span-1 { grid-column: span 1; height: 280px; }
+            
+            .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
+            .contact-form { padding: 24px; }
+            
+            .hero-btns { flex-direction: column; width: 100%; }
+            .btn { width: 100%; }
+        }
+        
+        @media (max-width: 480px) {
+            .container { padding: 0 20px; }
+            .hero-text h1 { font-size: 2.8rem; }
+            .project-content { padding: 20px; }
+            h2 { font-size: 2rem; }
+            .skill-card { padding: 20px; }
+        }
 
     <script src="script.js"></script>
 </body>
