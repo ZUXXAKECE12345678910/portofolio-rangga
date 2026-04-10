@@ -1,5 +1,5 @@
  // Typing Animation
-        const texts = ['Asep Gustiawan', 'Web Developer', 'Designer', 'Freelancer'];
+        const texts = ['Rangga-IJJ', 'Bug Hunter', 'Cyber security'];
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
